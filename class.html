@@ -1,0 +1,1120 @@
+<!-- Task - 1!!!............ -->
+
+<!-- find duplicates using Filter Method..... -->
+
+    <!-- <script>
+
+//Filter.........
+
+// var arr1 = [18,19,20,43,12]
+// var arr2 = [18,19,20,43,12]
+// var result = arr1.filter((v,i)=>{
+//     return i === arr2
+    
+// })
+// console.log(result);
+// console.log(arr.indexOf(18));
+
+// // model1....
+
+ var arrnum =[1,2,2,3,4,3,4,5,5,7,1]
+ var duplicates = arrnum.filter((val,index,argument)=>argument.indexOf(val) !== index)
+ console.log(duplicates);
+
+// model2....
+// var arrnum1 =[1,2,2,3,4,3,4,5,5,7,1]
+// var arrnum2 =[1,2,2,3,4,3,4,5,5,7,1]
+// var duplicates = arrnum1.filter((val,index)=>arrnum2.indexOf(val) !== index)
+// console.log(duplicates);
+// console.log(arrnum1.indexOf(3));
+</script> -->
+
+
+
+
+
+
+<!-- Task - 2!!!.......... -->
+
+<!-- find max, min using reduce()......... -->
+<!-- 
+<script>
+
+var arr = [3,2,31,1,23,54,22,65,18,71]
+
+const minFunction = arr.reduce((min,max)=>{
+
+    return( min < max) ? min:max
+    // return min < max 
+    // return min > max
+
+    })
+
+console.log(minFunction);
+// O/P:1
+
+var arr = [3,2,31,1,23,54,22,65,18,71]
+
+const maxFuntion = arr.reduce((min,max)=>{
+
+    return( min > max) ? min:max
+
+    })
+
+console.log(maxFuntion);
+// O/P:65
+
+
+// Ternary Operrator.....
+
+// let age = 18
+//  let result = (age === 18) ? "ready to vote" :
+//               (age < 18) ? "You con not be vote" : "You are not eligible to vote yet";
+
+// // (condition)?"if statement" : "else statement"
+
+// console.log(result);
+
+
+// reduce methode....
+
+// var arr =[1,2,3,4,5]
+
+// var result = arr.reduce((a,b)=>{
+//     return a+b 
+// })
+// console.log(result);
+
+</script> -->
+
+
+
+
+
+
+
+<!-- Task - 3!!! -->
+
+<!-- <script>
+    var a = 7
+    var b = "7"
+    console.log(a == b)
+    //O/P:true
+    console.log(a === b);
+   //O/P:false
+</script> -->
+
+
+
+
+
+
+
+<!-- Task - 4!!!.... -->
+
+<!-- Second large given array........... -->
+<!-- 
+<script>
+
+// model:1.....
+
+var arr = [77,87,90,2,7]
+var result = () =>{
+   fl = Math.max(...arr)
+   index = arr.indexOf(fl)
+   arr.splice(index,1)
+   sl = Math.max(...arr)
+return(sl)
+}
+console.log(result(arr))
+
+// model:2.....
+
+var a = [54,22,3,4,91]
+var fl = Math.max(...a)
+var index = a.indexOf(fl)
+var b = a.splice(index,1)
+// console.log(index);
+// console.log(a);
+var sl = Math.max(...a)
+console.log(sl)
+
+
+// we can remove any value from array using splice method........
+
+// var a = [1,2,3,30,4,25]
+// a.splice(3,1)
+// a.splice(2,1)
+// console.log(a);
+
+// find first max val in array....
+
+//     var arr = [2,3,45,24,55,22,98,44]
+//     var fl = Math.min(...arr)
+// // var fl = Math.max (...arr)
+//     console.log(fl);
+
+
+//defferance between splice & slice methods.....
+//(0,1) => 0 is a index value & 1 is a length
+
+// var a = [1,2,30,44]
+// var result = a.slice(2,3)
+// console.log(result);
+// // O/P:30
+
+// var a = [1,2,3,4,5]
+// var result = a.splice(2,1)
+// console.log(result);
+// // O/P:3 
+
+// console.log(result);
+// console.log(a.splice(3,1)); 
+
+// spread operator.......
+
+// var a = [1,2,3,4,45]
+// var b = [1,2,3,3,4,5]
+// var result1 = [...a,...b]
+
+// console.log(result);
+
+
+    </script> -->
+
+
+
+
+
+
+
+<!-- Task - 5!!!.... -->
+
+<!-- defferance between Filter and Find Method...... -->
+
+<!-- <script>
+//     var a = [
+//         {name : "john",age : "26"},
+//         {name : "john",age : "23"},
+//         {name : "john",age : "34"},
+//         {name : "john",age : "33"},
+//         {name : "john",age : "66"}
+//     ] 
+
+// // Filter........
+
+//example:1....
+
+// var filterval = a.filter((item)=>{
+// return item.age > 30;
+// })  
+// console.log(filterval);
+// // O/P:{name:"john",age:"34"}
+// // O/P:{name:"john",age:"33"}
+// // O/P:{name:"john",age:"66"}
+
+// // Find......
+
+// var findval = a.find((item)=>{
+//     return item.age > 30
+// })
+// console.log(findval);
+// // O/P:{name:"john",age:"34"}
+
+
+//example:2.....
+
+// var a = [1,2,3,4,3,5,4,1]
+// var duplicate = a.filter((v,i,arr)=>{
+//     return arr.indexOf(v) !== i;
+// })
+// console.log(duplicate);
+// O/P: [3,4,1]
+
+// var a = [1,2,3,4,3,5,4,1]
+// var duplicate = a.find((v,i,arr)=>{
+//    return arr.indexOf(v) !== i;
+// })
+// console.log(duplicate);
+// O/P: [3]
+
+//example:3.....
+
+var a = [0,1,3,4,5]
+var d = a.find((arr)=>{
+return arr > 3;
+})
+console.log(d);
+// O/P: [4]
+
+var a = [0,1,3,4,5]
+var d = a.filter((arr)=>{
+    return arr > 3;
+})
+console.log(d);
+// O/P: [4,5]
+
+</script>  -->
+
+
+
+
+
+
+
+<!-- Task :6....... -->
+
+<!-- find misssing value ..... -->
+
+<!-- <script>
+
+// example 1.......
+
+//    var a =[1,2,3,4,5,6,8,10]
+//    var missval = [];
+//    var result = (arr)=>{
+//     var maxval = Math.max(...a)
+//     var minval = Math.min(...a)
+//     for (let i = minval ; i < maxval ; i++){
+//     if(arr.indexOf(i)<0){
+//         missval.push(i)
+//     }
+//     }
+//     return(missval)
+//    } 
+//    console.log(result(a));
+
+// example 2.......
+
+   var a =[1,2,3,4,5,6,8,10]
+   var missval = []
+    var maxval = Math.max(...a)
+    var minval = Math.min(...a)
+    for (let i = minval ; i <= maxval ; i++){
+   
+        if(a.indexOf(i)<0){
+            // missval.push(i)
+            // console.log(i);
+        // console.log((a.indexOf(i)<0));
+        // console.log((arr.indexOf(-1)<0));
+    }
+
+    // else{
+    //     arr.push(i)
+    // }
+    }
+
+   console.log(missval);
+
+</script> -->
+
+
+
+
+
+<!-- Task :7....... -->
+
+<!-- find add or even ..... -->
+
+<!-- <script>
+var a = [1,2,3,4,5]
+var result = a.filter((arr)=>{
+    return arr%2 === 0
+//O/P:[2,4]
+    // return arr%2 !== 0
+//O/P:[1,3,5]
+}) 
+console.log(result);
+
+</script> -->
+
+
+
+
+<!-- Task 8.......... -->
+
+<!-- sum of all elements given array..... -->
+
+<!-- <script>
+
+// model 1....
+var a = [1,2,3,4,5]
+var result = a.reduce((fv,lv)=>{
+    return fv + lv
+})
+console.log(result);
+
+
+</script> -->
+
+
+
+
+
+
+
+<!-- Task : 9.... -->
+
+<!-- find factorial number -->
+
+<!-- <script>
+var a = prompt("enter your number")
+var fact = 1
+var b = 0
+    if(a<0){
+        console.log(`your value ${a} it's not valid`);
+    }
+else{
+    for(let i=1;i<=a;i++){
+ fact = fact * i
+b = b + i
+}
+console.log(`your ${a} factorial value is ${fact}`);
+console.log(`your ${a} b value is ${b}`);
+}
+</script> -->
+
+
+
+
+
+
+<!-- Task - 10........ -->
+
+<!-- find prime number ....... -->
+
+<!-- <script>
+var a = prompt("enter your number")
+if(a == 1){
+console.log(`${a} it's not a prime number `);
+}
+
+else if(a < 1){
+    console.log(`${a} number not valid`);
+}
+
+else{
+    for(i=2;i<a;i++){
+    if(a%i === 0){
+      var result =  (`${a} is not a prime number`);
+    break;
+    }
+   
+else{
+    var result = (`${a} is a prime number`);
+}
+    }
+console.log(result);
+}
+
+</script> -->
+
+
+
+
+
+
+<!-- Task No:11....... -->
+<!-- To find vowels given array -->
+ 
+<!-- <script>
+
+// var a = prompt("enter your letter")
+// // a = a.toLocaleLowerCase()
+// a = a.toLocaleUpperCase()
+// if(a=="A" || a=="E" || a=="I" || a=="O" || a=="U"){
+//     console.log(`your value ${a} is vowel`);
+// }
+// else{
+//     console.log(`your value ${a} is not a vowel`);
+// }
+
+// var a = prompt("enter the string")
+// const vowel = ["a","e","i","o","u"]
+// const result = (arr)=>{
+//     var count = 0;
+//     for (let letter of arr.toLowerCase()){
+//         if(vowel.includes(letter)){
+//             count++
+//         }
+//     }
+//     return(count)
+// }
+// console.log(result(a));
+
+
+
+//Includes example......
+
+//let text1 = "3154265";
+//let result1 = text1.includes("5");
+//console.log(result1);
+
+//let text2 = "Hello world, welcome to the universe.";
+//let result2 = text2.includes("world");
+//document.w(result2);
+
+</script> -->
+
+
+
+
+
+
+<!-- Task No:12........... -->
+
+<!-- Reverse the string..... -->
+
+<!-- <script>
+//method 1....
+
+var a = "butter"
+var arr = a.split("")
+var result = arr.reverse()
+console.log(result) 
+
+// method 2.....
+
+// var result = (str)=>{
+//     var a = str.split("")
+//     var reversestr = a.reverse();
+// return (reversestr)
+// // var joinstr = reversestr.join("")
+// // return(joinstr)
+// }
+// console.log(result("john"));
+
+
+</script> -->
+
+
+
+
+
+
+<!-- Task NO:13..... -->
+
+<!-- palindrome or not (true (or) false)...... -->
+
+<!-- 
+<script>
+
+// method1.....
+// var a = prompt("enter a number")
+// a = a.toLocaleLowerCase() 
+// var result = (arr)=>{
+// var str = arr.split("").reverse().join("")
+// if(str === arr){
+//     return true
+// }
+// else{
+//     return false
+// }
+// }
+// console.log(result(a));
+
+
+
+// method 2......
+
+// var a = prompt("enter a letter")
+// a = a.toLocaleLowerCase()
+// // var str = a.split("").reverse().join("")
+// var str = a.split("").reverse().join("")
+// if(str === a){
+//     console.log("true");
+// }
+// else{
+//     console.log("false");
+// }
+// console.log(str);
+// console.log(a);
+</script> -->
+
+
+
+
+
+<!-- Task No:14..... -->
+
+<!-- Swap the value ...... -->
+
+<!-- <script>
+
+// method1......
+var a = "7";
+var b = "8";
+[a,b]=[b,a]
+console.log(`value a is ${a} ; value b is ${b}`);
+
+
+// method2......
+
+var a = "4"
+var b = "10"
+
+var temp = a
+a = b
+b = temp
+console.log(`value a is ${a} ; value b is ${b}`);
+
+</script> -->
+
+
+
+
+
+<!-- Task No:15....... -->
+
+<!-- merge 2 array in order....... -->
+
+<!-- method 1: -->
+<!-- 
+<script>
+// var a = [1,3,2,5]
+// var b = [10,8,5]
+
+// var result = a.concat(b)
+// var finalval = result.sort((a,b)=>{
+//     return a-b;
+// })
+// console.log(finalval);
+
+
+// method 2......
+
+var a = [1,2,5,4,3]
+var b = [10,7,8]
+var result = [...a,...b]
+console.log(result);
+var filterval = result.sort((a,b)=>{
+    return a - b //assending order
+    // return b - a //desending order
+
+//comparative mathod........
+
+if (min < max)  return -1;
+if (min > max)  return 1;
+   
+   // if (min < max)  return -1;
+   // if (min > max)  return 1;
+return 0;
+
+
+})
+console.log(filterval);
+
+
+
+// sort method ...
+
+var a =[
+    {name:"john",age:21},
+    {name:"jeyavel",age:11},
+    {name:"HHH",age:13},
+    {name:"bigshow",age:31},
+    {name:"randy",age:12},
+    {name:"nikki",age:20}
+];
+a.sort((a,b)=>{
+    if(a.age < b.age) return -1;
+    // if(a.name < b.name) return -1;
+
+    if(a.age > b.age) return 1;
+    // if(a.name > b.name) return 1;
+
+    return 0;
+})
+
+console.log(a);
+
+
+// sort method...
+
+//var a = [1,2,6,3,5]
+//console.log(a.sort());
+</script> -->
+
+
+
+
+
+
+<!-- Task No:16...... -->
+
+<!-- find the factors of given integer..... -->
+<!-- <script>
+var a = prompt("enter the num");
+    for(let i=0;i<a;i++){
+if(a%i === 0){
+    console.log(i)
+}
+    }
+</script> -->
+
+
+
+
+<!-- Task NO:17...... -->
+
+<!-- Find Prime Number from 1- 100...... -->
+<!-- <script>
+var a = prompt("enter a number")
+
+for(i=1; i<=a ; i++){
+b=0;
+for(j=1;j<=a;j++){
+    if(i%j == 0){
+      b = b+1
+    }
+}
+if(b==2){
+    document.write(i+"<br/>")
+}
+}
+</script> -->
+
+
+
+
+
+
+
+
+<!-- Task NO:18...... -->
+
+<!-- Compare Two Array Equal Or Not...... -->
+<!-- 
+<script>
+var arr1 = [1,2,3,4,5]
+var arr2 = [5,4,3,2,1]
+// var result = arr1.length == arr2.length &&
+var result = arr1.every((arr)=>{
+    // if(arr2.indexOf(arr)>-1){
+    //     return(arr = [arr2.indexOf(arr)])
+    // }
+    return arr === arr1
+
+})
+console.log(result);
+
+
+
+
+// var  ages = [32, 33, 19, 40];
+
+// var result= ages.every((arr)=>arr>18)
+// // function checkAge(age) {
+// //   return age > 18;
+// // }
+// console.log(result);
+
+</script> -->
+
+
+
+
+
+
+
+<!-- Task No: 19..... -->
+
+<!-- Calculator ............ -->
+<!-- 
+<script>
+    var simple = prompt("eneter a simple like +,_,*,/")
+    var fl = parseFloat(prompt("eneter a first letter"))
+    var sl = parseFloat(prompt("eneter a second letter"))
+if(simple == "+"){
+var result = fl+sl
+}
+else if(simple == "-"){
+var result = fl-sl
+}
+else if(simple == "*"){
+    var result = fl*sl
+}
+else {
+var result = fl/sl    
+}
+console.log(result);
+
+</script> -->
+
+
+
+
+
+
+
+<!-- Task No:20........ -->
+
+<!-- Find Intersection of two array......... -->
+
+<!-- <script>
+
+// var a =[1,2,3,4,5,5,3,3,3];
+// var b = [2,3,4,57,12];
+// var result = a.filter((arr)=>{
+//     return b.includes(arr);
+// })
+// console.log(result);
+// console.log([...new Set(result)]);
+
+
+// example for [...new Set()]...........
+
+// var a = [1,2,2,2,3,3,4,5]
+// console.log([...new Set(a)]);
+
+</script> -->
+
+
+
+
+
+
+<!-- Task No:21........ -->
+
+<!-- Find Union of Two Arrays......... -->
+<!-- 
+<script>
+
+var a = [1,2,2,3,4,5]
+var b = [22,3,4,5,3,2,7]
+var result = [...a,...b]
+console.log(result);
+console.log([...new Set(result)]);
+
+
+</script> -->
+
+
+
+
+
+
+
+
+<!-- Task No:22   - (20/01/2024).......... -->
+
+<!-- To Convert Celsius to fahrenheit -->
+
+<!-- <script>
+
+// To convert celsius into fahrenheit.....
+
+var a = prompt("enter a number")
+var fah = (a*1.8)+32
+console.log(fah);
+
+// To Convert fahrenheit to celsius.....
+
+// var cel = 5/9*(a-32)
+// console.log(cel);
+
+
+</script> -->
+
+
+
+
+
+
+
+<!-- Task No:23   - (20/01/2024)......... -->
+
+<!-- how to convert kilometer into miles..... -->
+
+<!-- <script>
+
+var a = prompt("enter a value")
+var result = 0.621371 // 1km = 0.621371
+var result1 = a*result
+console.log(result1);
+
+
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Task No:24   - (22/01/2024)......... -->
+
+<!-- First Letter In Caps....  -->
+ 
+<!-- <script>
+// var a = prompt("enter a number")
+// var result=(arr)=>{
+//     var str = arr.split(" ")
+// var strval =str.map((value)=>{
+//     return value.charAt(0).toUpperCase() + value.slice(1) 
+// })
+// return strval.join(" ")
+// }
+
+// console.log(result(a));
+
+
+
+
+// example for split.... 
+// var a = "i am john"
+// var result = a.split(" ")
+// console.log(result);
+
+
+// example for charAt()......
+// var a = "i am john"
+// var result =  a.charAt(0).toLocaleUpperCase()
+// console.log(result);
+
+
+// // example for slice....
+// var a = [1,2,3,4,5]
+// console.log(a.slice(1,1));
+// console.log(a.splice(1,1));
+
+</script> -->
+
+
+
+
+
+
+
+
+
+
+<!-- Task No:25   - (23/01/2024)...... -->
+
+<!-- To Find Fabonacci sequence......  -->
+
+<!-- <script>
+    var a = 0;
+    var b = 1;
+    for(let i=0;i<=15;i++){
+        var temp = a+b;
+        a=b;
+        b=temp;
+        console.log(temp)
+    }
+</script> -->
+
+
+
+
+
+
+
+
+
+
+<!-- Task No:26   - (24/01/2024)...... -->
+
+<!-- print star pattern in diamond shap..... -->
+<!-- 
+<script>
+
+for(let i=1;i<=6;i++){
+   for(let k=1;k<=6-i;k++){
+       document.write("&nbsp;&nbsp;");
+   }
+     for(let j=1;j<=i;j++){
+       document.write(i+"&nbsp;&nbsp;");
+     }
+    document.write("<br>");
+}
+
+
+
+ for(let i=1;i<=6;i++){
+   for(let k=1;k<=i;k++){
+       document.write("&nbsp;&nbsp;")
+   }
+   for(let j=1;j<=6-i;j++){
+       document.write("*"+"&nbsp;&nbsp;")
+    }
+   document.write("<br>")
+ }
+
+
+
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Task No: 27    (25/01/2024).... -->
+
+<!-- Check The Number Of Occurance Of the Character.... -->
+
+<!-- <script>
+
+var string = prompt("enter a string")
+var letter = prompt("enter a letter")
+var count = 0;
+var noOfString = string.length;
+for(let i=1;i<=noOfString;i++){
+    if(string[i] === letter){
+        count++
+    }
+
+// console.log(string[i]);
+}
+console.log(count);
+
+</script> -->
+
+
+
+
+
+
+
+
+
+
+<!-- Task No: 28    (27/01/2024).... -->
+
+<!-- print table ...... -->
+
+<!-- <script>
+
+// method 1 .......
+
+// var a =prompt("enter a number")
+// for(let i=1;i<=10;i++){
+// var result = a*i
+// console.log(`${i}*${a} = ${result}`);
+// }
+
+
+// method 2 .......
+
+var number = function(table){
+    for(let i=1;i<=10;i++){
+var result = table*i
+console.log(`${i} * ${table} = ${result}`);
+}
+} 
+number(2)
+number(10)
+number(8)
+
+
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Task No: 29    (27/01/2024).... -->
+
+<!-- Interview Questions....... -->
+
+<!-- <script>
+
+// Question: 1
+
+// console.log(1);
+// setTimeout(()=>{console.log(2)},1000)
+// setTimeout(()=>{console.log(3)},0)
+// console.log(4);
+
+// O/P: 1,3,4,...2     
+
+
+
+// Question: 2
+
+// setTimeout(()=>{
+//     console.log(i);
+//     var i = 10;
+// },1000)
+
+// O/P: ...undefined...
+
+// var i = 10;
+// setTimeout(()=>{
+//     console.log(i);
+// },1000)
+
+// O/P: ...10
+
+
+
+
+// Question: 3
+
+// let count = 0;
+// function printCount(){
+//     if(count == 0){
+//         let count = 3;
+//     console.log("count1",count);
+//     }
+// console.log("count2",count);
+
+// }
+// printCount()
+
+
+
+
+// Question: 4
+
+
+// console.log(2+"2");//O/P: 22
+// console.log(2-"2");//O/P: 0
+// console.log("2"-2);//O/P: 0
+
+
+
+
+// Question: 5
+
+
+// var a = [1,2,3,4,5]
+// var mapmethod = a.map((arr)=>{
+// return arr + 3
+// })//[4,5,6,7,8]
+
+// var forechmethod = a.forEach((arr)=>{
+// return arr + 3
+// })// O/P: undefined
+
+// console.log(mapmethod,forechmethod);//[4,5,6,7,8],[undefined]
+
+
+// var forechmethod = a.forEach((arr,i)=>{
+//  a[i] = arr + 3
+// })//[4,5,6,7,8]
+
+// console.log(mapmethod,a);//[4,5,6,7,8],[4,5,6,7,8]
+
+
+</script> -->
+
+
